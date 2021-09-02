@@ -8,13 +8,15 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <link href="stylesheet.css" rel="stylesheet" >
-
+    <script type="text/javascript" src="validation.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <title>Sign Up Form</title>
 </head>
 <body>
 
-    <div class="container mt-100">
+    <div class="container mt-100 ">
  
         <div class="row">
 
@@ -45,18 +47,29 @@
 
             <div class=" col-lg-5 col-md-12 mt-20 m-order2">
                 
-                <div class="card">
+                <div class="card form-card">
                     <div class="card-body text-center">
 
-                        <form style="margin: 20px;">
-                            <input type="text" class="form-control form-height" placeholder="First Name"><br>
-                            <input type="text" class="form-control form-height" placeholder="Last Name"><br>
-                            <input type="text" class="form-control form-height" placeholder="Email Address"><br>
-                            <input type="text" class="form-control form-height" placeholder="Password">
+                        <form style="margin: 20px; text-align: right !important;">
+                            
+                            
+                            <input type="text" class="form-control form-height" id="First Name" placeholder="First Name">
+                            <label for="First Name" class="error-messages" id="fname"></label>
+                            
+                            
+                            <input type="text" class="form-control form-height" id="Last Name" placeholder="Last Name">
+                            <label for="Last Name" class="error-messages" id="lname"></label>
+                            
+                            <input type="text" class="form-control form-height" id="email" placeholder="Email Address">
+                            <label for="email" class="error-messages" id="mail"></label>
+                            
+                            <input type="password" class="form-control form-height" id="Password" placeholder="Password">
+                            <label for="Password" class="error-messages" id=pass></label>
+
                         </form>
 
                         <div class="d-grid" style="margin: 20px;">
-                            <button class="btn btn-large" type="button">CLAIM YOUR FREE TRIAL</button>
+                            <button class="btn btn-large" type="button" onclick="validation()">CLAIM YOUR FREE TRIAL</button>
                         </div>
 
                         <div class="last-text">
@@ -69,6 +82,7 @@
             </div>
 
         </div>
+
     </div>
 
 </body>
